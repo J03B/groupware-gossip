@@ -54,7 +54,13 @@ router.get('/post/:id', async (req, res) => {
 // GET one dashboard
 router.get('/user/:id', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id);
+    const userData = await User.findByPk(req.params.id, {
+      include: [
+        {
+          model: Post,
+        },
+      ],
+    });
 
     const user = userData.get({ plain: true });
     const loggedIn = req.session.loggedIn;
