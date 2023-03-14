@@ -1,0 +1,10 @@
+<section class="card">
+    <a href="/post/{{post.id}}">
+        <header>{{post.title}}</header>
+
+        <div class="card-body">
+            <p>{{post.content}}</p>
+            <p>Posted by: {{get_username post.user_id}} on {{format_date post.date_posted}}</p>
+        </div>
+    </a>
+</section>

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -70,5 +70,20 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+router.get('/getUsernameById/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      attributes: [
+        'username',
+      ],
+    });
+
+    res.status(200).json(userData.username);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;

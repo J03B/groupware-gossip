@@ -7,5 +7,14 @@ module.exports = {
         new Date(date).getFullYear() + 5
       }`;
     },
+    get_username: async (userId) => {
+      const response = await fetch(`api/users/getUsernameById/${userId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      return response;
+    }
   };
   
