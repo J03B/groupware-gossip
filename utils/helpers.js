@@ -3,8 +3,8 @@ module.exports = {
       return date.toLocaleTimeString();
     },
     format_date: (date) => {
-      return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${
-        new Date(date).getFullYear() + 5
+      return `${new Date(date).getMonth()}/${new Date(date).getDate()}/${
+        new Date(date).getFullYear()
       }`;
     },
     get_username: async (userId) => {
@@ -14,7 +14,9 @@ module.exports = {
           'Content-Type': 'application/json',
         },
       });
-      return response;
-    }
+      const uNam = "";
+      response.then((userData) => uNam = userData.id);
+      return uNam;
+    },
   };
   

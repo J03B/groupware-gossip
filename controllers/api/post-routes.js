@@ -18,6 +18,7 @@ router.get('/:id', async (req, res) => {
   
       const post = postData.get({ plain: true });
       const loggedIn = req.session.loggedIn;
+
       res.render('post', { post, loggedIn });
     } catch (err) {
       console.log(err);
@@ -35,14 +36,20 @@ router.get('/user/:id', async (req, res) => {
             include: [
                 {
                 model: Post,
+                include: [
+                    {
+                        model: User,
+                        attributes: [ 'username', ],
+                    },
+                ],
                 },
             ],
         });
 
         const user = userData.get({ plain: true });
         const loggedIn = req.session.loggedIn;
-        console.log(user);
-
+        // console.log(user);
+        
         res.render('dashboard', { user, loggedIn });
     } catch (err) {
         console.log(err);
@@ -61,7 +68,6 @@ router.post('/user/:id', async (req, res) => {
         });
 
         const loggedIn = req.session.loggedIn;
-        console.log(postData);
 
         res.status(200).json({ postData, loggedIn });
     } catch (err) {

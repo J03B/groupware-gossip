@@ -78,7 +78,6 @@ router.get('/getUsernameById/:id', async (req, res) => {
         'username',
       ],
     });
-
     res.status(200).json(userData.username);
   } catch (err) {
     console.log(err);
