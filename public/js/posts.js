@@ -18,7 +18,7 @@ const addPostHandler = async (event) => {
         if (response.ok) {
             document.querySelector('#post-title').value = "";
             document.querySelector('#post-content').value = "";
-            //location.reload();
+            location.reload();
         }
     }
     else {

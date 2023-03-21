@@ -1,20 +1,20 @@
 {{#if loggedIn}}
 <section class="card text-bg-light border-dark mb-3">
     <div class="card-body">
-        <h5 class="card-title d-flex justify-content-center p-2 bg-dark text-white">{{post.title}}</h4>
+        <h5 class="card-title d-flex justify-content-center p-2 bg-dark text-white this-post-id" id="post-{{post.id}}">{{post.title}}</h4>
         <h6 class="card-subtitle mb-2 text-muted d-flex justify-content-end">Posted by: {{post.user.username}} on {{format_date post.date_posted}}</h5>
         <p class="card-text d-flex justify-content-start">{{post.content}}</p>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCommentModal">+ Add Comment</button>
     </div>
 </section>
 
-{{#each comments as |com|}}
-
-<div class="card-body">
-    <h6>
-        {{com.content}}
-    </h6>
-</div>
+{{#each post.comments as |com|}}
+<section class="card text-bg-light border-dark mb-3">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted d-flex">{{com.content}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted d-flex justify-content-end">Comment by: {{com.user.username}} on {{format_date com.date_posted}}</h5>
+    </div>
+</section>
 
 {{/each}}
 

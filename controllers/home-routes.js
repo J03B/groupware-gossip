@@ -51,7 +51,15 @@ router.get('/post/:id', async (req, res) => {
             'username',
           ],
         },
-        { model: Comment, },
+        { 
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: [ 'username', ],
+            }
+          ]
+        },
       ],
     });
 
@@ -59,6 +67,7 @@ router.get('/post/:id', async (req, res) => {
     const loggedIn = req.session.loggedIn;
 
     res.render('post', { post, loggedIn });
+    //res.status(200).json({post, loggedIn})
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
