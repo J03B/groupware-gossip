@@ -11,6 +11,7 @@ router.post('/signup', async (req, res) => {
     });
 
     // Sets up sessions with the 'loggedIn' variable
+    req.session.user = dbUserData.id;
     req.session.save(() => {
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
@@ -30,11 +31,19 @@ router.post('/login', async (req, res) => {
       },
     });
 
+    // Email did not exist - check if username exists
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
-      return;
+      dbUserData = await User.findOne({
+        where: {
+          username: req.body.emailOrUsername,
+        },
+      });
+      if (!dbUserData) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect credentials. Please try again!' });
+        return;
+      }
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
@@ -46,6 +55,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    req.session.user = dbUserData.id;
     req.session.save(() => {
       // Once the user successfully logs in, set up sessions with the 'loggedIn' variable
       req.session.loggedIn = true;

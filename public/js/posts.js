@@ -4,10 +4,10 @@ const addPostHandler = async (event) => {
 
     const title = document.querySelector('#post-title').value.trim();
     const content = document.querySelector('#post-content').value.trim();
-    const user_id = localStorage.getItem('userId');
-    if (title && content && user_id) {
-        const datePosted = Date(Date.now());
-        const response = await fetch(`${user_id}`, {
+    if (title && content) {
+        const datePosted = new Date(Date.now()).toISOString();
+        console.log(datePosted);
+        const response = await fetch(`/api/posts/user`, {
             method: 'POST',
             body: JSON.stringify({ title, content, datePosted }),
             headers: {
@@ -18,6 +18,7 @@ const addPostHandler = async (event) => {
         if (response.ok) {
             document.querySelector('#post-title').value = "";
             document.querySelector('#post-content').value = "";
+            //location.reload();
         }
     }
     else {

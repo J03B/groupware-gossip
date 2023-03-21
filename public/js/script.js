@@ -1,8 +1,7 @@
 // Event listener to get dashboard data
 const dashboardLinkHandler = async (event) => {
     event.preventDefault();
-    const userId = localStorage.getItem('userId')
-    const response = await fetch(`api/posts/user/${userId}`, {
+    const response = await fetch(`dashboard`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -10,9 +9,9 @@ const dashboardLinkHandler = async (event) => {
     });
   
     if (response.ok) {
-        document.location.replace(`api/posts/user/${userId}`);
+        document.location.replace(`/dashboard`);
     } else {
-        alert('Failed to load dashboard');
+        document.location.replace('/login');
     }
 };
 

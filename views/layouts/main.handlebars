@@ -17,22 +17,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-4">
-                        <a class="nav-link active" aria-current="page" href="/"><h2 class="display-3">Home</h2></a>
+                        <a class="nav-link active" aria-current="page" href="/"><h3 class="display-6">Home</h3></a>
                     </li>
                     <div class="vr"></div>
                     <li class="nav-item px-4">
-                        <a id="dashboard-link" class="nav-link" href="/dashboard"><h2 class="display-3">Dashboard</h2></a>
+                        <a id="dashboard-link" class="nav-link" href="/dashboard"><h3 class="display-6">Dashboard</h3></a>
                     </li>
                     <div class="vr"></div>
                     <li class="nav-item px-4">
                         {{#if loggedIn}}
-                        <a id="logout" class="nav-link" href=""><h2 class="display-3">Logout</h2></a>
+                        <a id="logout" class="nav-link" href=""><h3 class="display-6">Logout</h3></a>
                         {{else}}
-                        <a class="nav-link" href="/login"><h2 class="display-3">Login</h2></a>
+                        <a class="nav-link" href="/login"><h3 class="display-6">Login</h3></a>
                         {{/if}}
                     </li>
                 </ul>
             </div>
+            <div><h2 class="display-2">Groupware Gossip</h2> </div>
         </div>
     </nav>
   </header>

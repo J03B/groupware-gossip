@@ -1,0 +1,43 @@
+{{#if loggedIn}}
+<section class="card text-bg-light border-dark mb-3">
+    <div class="card-body">
+        <h5 class="card-title d-flex justify-content-center p-2 bg-dark text-white">{{post.title}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted d-flex justify-content-end">Posted by: {{post.user.username}} on {{format_date post.date_posted}}</h5>
+        <p class="card-text d-flex justify-content-start">{{post.content}}</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCommentModal">+ Add Comment</button>
+    </div>
+</section>
+
+{{#each comments as |com|}}
+
+<div class="card-body">
+    <h6>
+        {{com.content}}
+    </h6>
+</div>
+
+{{/each}}
+
+<!-- Modal -->
+<div class="modal fade" id="addCommentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Comment</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <textarea id="comment-content" type="text" rows="5" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save-comment-btn">Save Comment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/onePost.js"></script>
+{{/if}}
