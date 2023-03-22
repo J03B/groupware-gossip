@@ -1,7 +1,7 @@
 // Event listener to get dashboard data
 const dashboardLinkHandler = async (event) => {
     event.preventDefault();
-    const response = await fetch(`dashboard`, {
+    const response = await fetch(`/dashboard`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

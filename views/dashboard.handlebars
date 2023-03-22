@@ -34,7 +34,7 @@
     <h3 class="posts">Posts by: {{user.username}}</h3>
     <section class="flex-row justify-center">
         {{#each user.posts as |post|}}
-        {{> post-details}}
+        {{> post-details isDashboard=true }}
         {{/each}}
     </section>
 </section>
