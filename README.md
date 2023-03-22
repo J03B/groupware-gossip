@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Click here to go to the Groupware Gossip deployed site.]()
+[Click here to go to the Groupware Gossip deployed site.](https://secure-harbor-53666.herokuapp.com/)
 
 ## Table of Contents
 
