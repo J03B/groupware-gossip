@@ -1,5 +1,13 @@
-{{#each posts as |post|}}
+{{#if loggedIn}}
 
-{{>post-details}}
+    {{#each posts as |post|}}
+        {{> post-details loggedIn=true }}
+    {{/each}}
 
-{{/each}}
+{{else}}
+
+    {{#each posts as |post|}}
+        {{> post-details }}
+    {{/each}}
+
+{{/if}}

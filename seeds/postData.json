@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Get interested in coding!",
+        "content": "If you're new to coding, or even if you're a seasoned pro, it's important to understand the difference between front-end and back-end development. We'll go over those terms, as well as how to get involved in coding projects. Keep reading!",
+        "date_posted": "2023-03-01T12:00:00.000Z",
+        "user_id": "2"
+    },
+    {
+        "title": "The differences between front end and back end",
+        "content": "Ever wondered what the difference between front end and back end coding is? I've got you covered!\n\nFront end development involves designing and creating the user interface of a website. Back-end development involves creating the code that makes up the actual features of a website. While both are necessary to create a functional website, they are different in what they focus on and how they approach their goals.\n\nThere are many different types of coding languages, but some of the most common ones include:\n\n- Python (front end)  - PHP (back end)  - C++ (back end)  - Java (back end)  - C# (back end)",
+        "date_posted": "2023-03-03T12:00:00.000Z",
+        "user_id": "2"
+    },
+    {
+        "title": "Dear fellow coders",
+        "content": "I'm a front-end developer. I love to write code and make things. But I get so much satisfaction from knowing that I'm making something people will use—not just for myself, but for other people who need it.",
+        "date_posted": "2023-03-05T12:00:00.000Z",
+        "user_id": "1"
+    },
+    {
+        "title": "Why I like back end",
+        "content": "I think back-end development is so cool because it's really complex. You have to think about security, performance, and scalability of your software. It's not like writing a blog post where you just have to write some words in a paragraph or two! You have to think about how the user will interact with it and make sure they're getting the right results.",
+        "date_posted": "2023-03-07T12:00:00.000Z",
+        "user_id": "1"
+    },
+    {
+        "title": "Who's got questions!?",
+        "content": "Have you ever wondered what a front end developer does? A back end developer? The difference between them? We've got a lot of answers for these questions and more.",
+        "date_posted": "2023-03-09T12:00:00.000Z",
+        "user_id": "2"
+    },
+    {
+        "title": "If you're looking to get into web development - Part 1",
+        "content": "Front end development: Front-end developers work with the user interface of a website or application. They're responsible for designing, coding, and testing the parts of a website where people interact with it—the parts that users see when they visit the site and what happens when they navigate through it.",
+        "date_posted": "2023-03-11T12:00:00.000Z",
+        "user_id": "3"
+    },
+    {
+        "title": "If you're looking to get into web development - Part 2",
+        "content": "Back end software: Back-end software developers are responsible for creating and maintaining the databases that store all of your company's data. They work on everything from small applications like accounting systems to large enterprise-level systems that manage large volumes of information.",
+        "date_posted": "2023-03-13T12:00:00.000Z",
+        "user_id": "3"
+    },
+    {
+        "title": "About Me",
+        "content": "I've been programming since I was in middle school, but it wasn't until college when I started making money with my coding skills. Nowadays, if you want to learn more about coding or start working on projects as a freelancer, there are tons of resources out there—it's just a matter of finding what works best for your needs!",
+        "date_posted": "2023-03-15T12:00:00.000Z",
+        "user_id": "1"
+    },
+    {
+        "title": "So you want to learn how to code, huh?",
+        "content": "First things first: what is coding? Coding is writing computer programs that can be used by other programmers to make a website or app. It's about creating something that helps people do something, and coders are the ones who create these things.",
+        "date_posted": "2023-03-17T12:00:00.000Z",
+        "user_id": "2"
+    },
+    {
+        "title": "Front End | Back End",
+        "content": "Front end development is the process of creating a website or app. The front end is where your users will see and interact with your product, so it needs to be as beautiful and user-friendly as possible.\n\nBack end software refers to the underlying technology of a website or app. It's responsible for connecting users with your product and storing data about them so it can be accessed later.",
+        "date_posted": "2023-03-19T12:00:00.000Z",
+        "user_id": "3"
+    }
+]
+  

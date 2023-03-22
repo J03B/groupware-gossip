@@ -3,7 +3,9 @@
         <h5 class="card-title d-flex justify-content-center p-2 bg-dark text-white">{{title}}</h4>
         <h6 class="card-subtitle mb-2 text-muted d-flex justify-content-end">Posted by: {{user.username}} on {{format_date date_posted}}</h5>
         <p class="card-text d-flex justify-content-start">{{content}}</p>
+        {{#if loggedIn}}
         <a class="card-link btn btn-secondary" href="/post/{{id}}">View post</a>
+        {{/if}}
         {{#if isDashboard}}
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#delete-post-modal-{{id}}" id="delete-post-{{id}}">Delete post</button>
         {{/if}}

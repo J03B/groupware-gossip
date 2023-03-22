@@ -28,15 +28,16 @@
     </div>
   </div>
 </div>
-{{/if}}
+
 
 <section class="container">
     <h3 class="posts">Posts by: {{user.username}}</h3>
     <section class="flex-row justify-center">
         {{#each user.posts as |post|}}
-        {{> post-details isDashboard=true }}
+          {{> post-details isDashboard=true loggedIn=true}}
         {{/each}}
     </section>
 </section>
 
 <script src="/js/posts.js"></script>
+{{/if}}
